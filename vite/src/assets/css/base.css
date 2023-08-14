@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,9 +21,15 @@ html {
 
 body {
 	@apply text-base antialiased leading-relaxed text-black;
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Montserrat', sans-serif;
+}
 h1 {
 	@apply text-2xl lg:text-4xl;
 }
@@ -40,13 +46,9 @@ h4 {
 	@apply text-lg lg:text-xl;
 }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4 {
-	@apply py-6;
+.btn-one {
+	@apply border-solid border-primary-200 border rounded-full bg-primary-200 text-white py-3 px-6 inline-flex items-center justify-center w-fit;
 }
-
-.content p {
-	@apply py-6;
+.btn-two {
+	@apply border-solid border-primary-200 border rounded-full bg-transparent text-primary-200 py-3 px-6 inline-flex items-center justify-center w-fit;
 }

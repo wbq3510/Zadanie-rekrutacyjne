@@ -1,2 +1,25 @@
 @import './base.css';
 @import './menu.css';
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+.swiper-slide-active .animation-hero-left-col:after {
+	content: '';
+	transform: translate(0, -50%);
+	animation: animationHero 1s linear forwards;
+	@apply min-w-full min-h-full w-[50vw] h-auto absolute top-1/2 left-1/2 bg-primary-100 -z-10;
+}
+
+@keyframes animationHero {
+	0% {
+		@apply left-1/2;
+	}
+	100% {
+		@apply -left-1/2;
+	}
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+	@apply hidden;
+}

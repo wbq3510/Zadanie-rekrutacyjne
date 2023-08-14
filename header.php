@@ -35,7 +35,7 @@
                             </svg></button>
 
                         <ul
-                            class="gap-12 items-center lg:flex flex-wrap primary-menu reset-list-style px-6 lg:px-0 hidden  absolute bg-primary-100 lg:bg-transparent text-black left-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto min-h-screen lg:min-h-0">
+                            class="gap-12 items-center flex-col lg:flex-row content-start lg:flex flex-wrap primary-menu reset-list-style px-6 lg:px-0 hidden fixed bg-primary-100 lg:bg-transparent text-black left-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto min-h-screen lg:min-h-0">
 
                             <?php
 								if ( has_nav_menu( 'primary' ) ) {
@@ -66,9 +66,10 @@
                     /*                                search widget                               */
                     /* -------------------------------------------------------------------------- */
                     ?>
-                            <div class="search-wrap relative"><?php
+                            <div class="search-wrap relative px-6 lg:px-0 my-2 lg:my-0 py-3 lg:py-0"><?php
                     if ( is_active_sidebar( 'header-search' ) ) : ?>
-                                <div id="search-input" class="hidden" role="complementary">
+                                <div id="search-input" class="hidden absolute left-6 lg:-left-44 top-14 lg:top-11 z-40"
+                                    role="complementary">
                                     <?php dynamic_sidebar( 'header-search' ); ?>
                                 </div>
                                 <?php endif; ?>
