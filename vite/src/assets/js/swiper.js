@@ -1,10 +1,10 @@
-// core version + navigation, pagination modules:
+// core version + navigation module:
 import Swiper, { Navigation } from 'swiper'
 // import Swiper and modules styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-// init Swiper hero icon:
+// init Swiper hero:
 const hero = new Swiper('.heroSwiper', {
 	modules: [Navigation],
 	slidesPerView: 1,
