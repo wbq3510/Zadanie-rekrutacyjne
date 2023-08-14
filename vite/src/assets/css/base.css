@@ -54,9 +54,9 @@ h4 {
 #site-navigation.toggled ul {
 	@apply block !important;
 }
-#site-navigation li a{
-    @apply text-lg lg:text-base px-6 lg:px-0 my-2 lg:my-0 py-3 lg:py-0 block lg:inline-block ; 
+#site-navigation li a {
+	@apply text-lg lg:text-sm px-6 lg:px-0 my-2 lg:my-0 py-3 lg:py-0 block lg:inline-block;
 }
 #site-navigation li.current-menu-item a {
-    @apply bg-black bg-opacity-5 lg:bg-transparent rounded lg:rounded-none;
-    }
+	@apply bg-black bg-opacity-5 lg:bg-transparent rounded lg:rounded-none;
+}
