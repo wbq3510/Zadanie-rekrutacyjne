@@ -3,8 +3,7 @@
 Wszystkie treści na stronie są dynamicznie powiązane z ACF. 
 Hero - repeater 
 
-Na stronie korzystam z stworzonych funkcji. Dzięki temu elementy można wykorzystywać w przyszłości na stronie bez konieczności duplikowania kodu. 
-Przykładowo w /templates/home.php jest <?php heroSlider() ?>. Wszystkie funkcje znajdują się w pliku /srcwp/classes.php
+Na stronie korzystam ze stworzonych funkcji. Dzięki temu elementy można wykorzystywać w przyszłości na stronie bez konieczności duplikowania kodu. Wszystkie funkcje znajdują się w pliku /srcwp/classes.php
 
 CSS:
 vite/src/assets/css/base.css - ogólne style
