@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "swiper": "^8.4.5",
+    "swiper": "^8.4.7",
     "vue": "^3.2.45",
     "vue3-burger-menu": "^1.1.1"
   },

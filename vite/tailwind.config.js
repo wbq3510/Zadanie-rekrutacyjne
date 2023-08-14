@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
-				'2xl': '1440px'
+				
+				'2xl': '1480px'
 			},
 			fontSize: {},
 
