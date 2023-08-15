@@ -1,6 +1,17 @@
 @import './base.css';
 @import './menu.css';
 
+body.overlay {
+	@apply transition-all;
+}
+body.overlay:after {
+	content: '';
+	@apply bg-black min-h-screen h-full w-full absolute top-[68px] z-[1] transition-all;
+	animation: opacity 0.3s linear forwards;
+}
+body {
+	@apply relative;
+}
 /* -------------------------------------------------------------------------- */
 /*                                    HERO                                    */
 /* -------------------------------------------------------------------------- */
@@ -11,6 +22,52 @@
 	@apply min-w-full min-h-full w-[50vw] h-auto absolute top-1/2 left-1/2 bg-primary-100 -z-10;
 }
 
+.swiper-button-prev:after,
+.swiper-button-next:after {
+	@apply hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     s1                                     */
+/* -------------------------------------------------------------------------- */
+.link-hover:hover svg {
+	@apply !ml-4;
+}
+.link-hover:after {
+	content: '';
+	@apply w-full absolute bg-primary-200 h-[1px] -bottom-1 left-0;
+}
+.box-hover:hover {
+	box-shadow: 9px 11px 29px #1b5b312f;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     s2                                     */
+/* -------------------------------------------------------------------------- */
+.s2:before {
+	content: '';
+	transform: translateY(-50%);
+	@apply absolute top-1/2 -left-1/2 h-auto min-h-full w-[50vw] min-w-full bg-primary-200 z-[1];
+}
+[data-aos='example-anim1'].aos-animate:before {
+	content: '';
+	transform: translateY(-50%);
+	animation: animationSection 1s linear forwards;
+	@apply absolute top-1/2 -left-1/2 h-auto min-h-full w-[50vw] min-w-full bg-primary-200 z-[1];
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Animations                                 */
+/* -------------------------------------------------------------------------- */
+@keyframes animationSection {
+	0% {
+		@apply -left-1/2;
+	}
+	100% {
+		left: 50%;
+		@apply left-1/2;
+	}
+}
 @keyframes animationHero {
 	0% {
 		@apply left-1/2;
@@ -19,7 +76,12 @@
 		@apply -left-1/2;
 	}
 }
-.swiper-button-prev:after,
-.swiper-button-next:after {
-	@apply hidden;
+@keyframes opacity {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		@apply opacity-50;
+	}
 }

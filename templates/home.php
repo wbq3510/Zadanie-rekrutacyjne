@@ -32,6 +32,20 @@ get_header(); ?>
         </div>
     </section>
 
+    <!-- S1 -->
+    <section class="pb-40 pt-120px bg-primary-300">
+        <div class="container mx-auto">
+            <span
+                class=" text-primary-200 text-xs font-medium mb-3 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
+            <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
+            <div class="pb-24"><?php the_field( 'opis-s1' ); ?></div>
+
+
+        </div>
+    </section>
+
+    <!-- s2 -->
+    <?php sectionTwo() ?>
 
 </div>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 @tailwind base;
 @tailwind components;
@@ -18,7 +18,9 @@ html {
 .container {
 	@apply px-4 lg:px-12;
 }
-
+.inter {
+	font-family: 'Inter', sans-serif;
+}
 body {
 	@apply text-base antialiased leading-relaxed text-black;
 	font-family: 'Inter', sans-serif;
@@ -35,11 +37,11 @@ h1 {
 }
 
 h2 {
-	@apply text-xl lg:text-3xl;
+	@apply text-xl lg:text-5xl;
 }
 
 h3 {
-	@apply text-lg lg:text-2xl;
+	@apply text-lg lg:text-28px;
 }
 
 h4 {

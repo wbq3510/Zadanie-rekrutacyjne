@@ -17,13 +17,16 @@ module.exports = {
 			screens: {
 				'2xl': '1480px',
 			},
-			fontSize: {},
+			fontSize: {
+				'28px': ['1.75rem', '2.0125rem'],
+			},
 
 			colors: {
 				gray: {},
 				primary: {
 					100: '#DCC1AB',
 					200: '#1B5B31',
+					300: '#F5F0EC',
 				},
 			},
 			spacing: {
@@ -32,6 +35,8 @@ module.exports = {
 				'6px': '0.375rem',
 				'42px': '2.625rem',
 				'18px': '1.125rem',
+				'120px': '7.5rem',
+				'34px': '2.125rem',
 			},
 			lineHeight: {},
 			boxShadow: {},

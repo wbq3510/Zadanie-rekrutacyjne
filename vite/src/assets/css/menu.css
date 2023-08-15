@@ -78,3 +78,10 @@ header nav ul li ul li ul li {
 		@apply shadow-none p-0 min-w-min mt-0 gap-y-6px flex-col;
 	}
 }
+.stickyHeader {
+	@apply !fixed top-0 w-full bg-white;
+}
+
+.stickyBody {
+	@apply pt-[68px];
+}

@@ -10,6 +10,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" type="image/png" href="<?= get_stylesheet_directory_uri() . '/assets/images/favicon.png'; ?>">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <?php wp_head(); ?>
     <?php include("dist/head.html"); ?>
@@ -17,7 +19,7 @@
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
     <div class=''>
-        <header id="site-header">
+        <header id="site-header" class="relative z-50">
             <div class='container relative mx-auto'>
                 <div class='flex flex-nowrap py-6 lg:py-0 items-center'>
                     <div class='mr-auto'><a href="/">
