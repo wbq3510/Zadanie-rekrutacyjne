@@ -39,13 +39,50 @@ get_header(); ?>
                 class=" text-primary-200 text-xs font-medium mb-3 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
             <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
             <div class="pb-24"><?php the_field( 'opis-s1' ); ?></div>
-
-
+            <?php sectionOneBlocks() ?>
         </div>
     </section>
 
     <!-- s2 -->
     <?php sectionTwo() ?>
+
+    <!-- s3 -->
+
+    <section>
+        <div class="container mx-auto">
+            <div><?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
+            <h2><?php the_field( 'naglowek-s3' ); ?></h2>
+        </div>
+
+        <div id="macy-container" class="container mx-auto">
+            <?php $obrazki_urls = get_field( 'obrazki' ); ?>
+            <?php if ( $obrazki_urls ) :  ?>
+            <?php foreach ( $obrazki_urls as $obrazki_url ): ?>
+            <img src="<?php echo esc_url( $obrazki_url ); ?>" />
+            <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+
+        <!-- Dodaj bibliotekę macy.js -->
+        <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var container = document.getElementById("macy-container");
+            var macy = Macy({
+                container: container,
+                trueOrder: true,
+                waitForImages: false,
+                margin: {
+                    x: 10,
+                    y: 16
+                },
+                columns: 3,
+            });
+        });
+        windows.do
+        </script>
+    </section>
 
 </div>
 
