@@ -85,3 +85,6 @@ body {
 		@apply opacity-50;
 	}
 }
+.hiddenMasonyImg {
+	display: none;
+}
