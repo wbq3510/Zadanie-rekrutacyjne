@@ -19,23 +19,44 @@
     <div class=''>
         <header id="site-header">
             <div class='container relative mx-auto'>
-                <div class='flex flex-wrap items-center'>
-                    <div class=''><a href="/">
+                <div class='flex flex-nowrap items-center'>
+                    <div class='mr-auto'><a href="/">
                             <?php if ( get_field( 'logo', 'option' ) ) : ?>
                             <img src="<?php the_field( 'logo', 'option' ); ?>" />
                             <?php endif ?>
                         </a></div>
-                    <nav id="site-navigation" class="ml-auto ">
-                        <button class="menu-toggle lg:hidden" aria-controls="primary-menu" aria-expanded="false"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M0 7.897C0 7.402.402 7 .897 7h22.206a.897.897 0 010 1.794H.897A.897.897 0 010 7.897zM0 16.196c0-.495.402-.897.897-.897h14.58a.897.897 0 010 1.794H.897A.897.897 0 010 16.197z"
-                                    clip-rule="evenodd" />
-                            </svg></button>
+                    <nav id="site-navigation" class="w-auto lg:w-full">
+                        <button class="menu-toggle lg:hidden relative" aria-controls="primary-menu"
+                            aria-expanded="false">
+                            <div
+                                class="open-menu w-14 h-14 sm:w-70px sm:h-70px bg-primary-200 rounded-full flex justify-center items-center hover:bg-primary-100 transition-all">
+                                <svg class="open-menu-svg opacity-100 transition-all" width="29" height="13"
+                                    viewBox="0 0 29 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line y1="0.5" x2="29" y2="0.5" stroke="white" />
+                                    <line y1="0.5" x2="29" y2="0.5" stroke="white" />
+                                    <line y1="0.5" x2="29" y2="0.5" stroke="white" />
+                                    <line y1="6.5" x2="23" y2="6.5" stroke="white" />
+                                    <line y1="6.5" x2="23" y2="6.5" stroke="white" />
+                                    <line y1="6.5" x2="23" y2="6.5" stroke="white" />
+                                    <line y1="12.5" x2="15" y2="12.5" stroke="white" />
+                                    <line y1="12.5" x2="15" y2="12.5" stroke="white" />
+                                    <line y1="12.5" x2="15" y2="12.5" stroke="white" />
+                                </svg>
+                            </div>
+                        </button>
 
                         <ul
-                            class="gap-12 items-center flex-col lg:flex-row content-start lg:flex flex-wrap primary-menu reset-list-style px-6 lg:px-0 hidden fixed bg-primary-100 lg:bg-transparent text-black left-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto min-h-screen lg:min-h-0">
+                            class="gap-12 items-center flex-col lg:flex-row content-start justify-end lg:flex flex-wrap primary-menu reset-list-style px-6 lg:px-0 hidden fixed bg-primary-100 lg:bg-transparent text-black left-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto min-h-screen lg:min-h-0">
+                            <div
+                                class="close-menu lg:hidden flex font-medium cursor-pointer uppercase right-42px top-42px absolute z-50 text-white items-center text-lg">
+                                zamknij
+                                <svg class="ml-18px" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.00004 2.00006L8.49997 8.49998M8.49997 8.49998L15 15M8.49997 8.49998L15 2M8.49997 8.49998L2 14.9999"
+                                        stroke="white" stroke-width="3" stroke-linecap="round" />
+                                </svg>
+                            </div>
 
                             <?php
 								if ( has_nav_menu( 'primary' ) ) {

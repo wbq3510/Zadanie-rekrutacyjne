@@ -29,6 +29,7 @@ module.exports = {
 			spacing: {
 				'10px': '0.625rem',
 				'72px': '4.5rem',
+				'6px': '0.375rem',
 			},
 			lineHeight: {},
 			boxShadow: {},
