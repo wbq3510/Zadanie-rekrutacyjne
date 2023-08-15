@@ -5,7 +5,10 @@ Template name: Home
 get_header(); ?>
 <div class="vue-app">
     <index id="<?php echo get_option('page_on_front');?>"></index>
-    <section class=" ">
+
+
+    <!-- HERO -->
+    <section>
         <div class="swiper heroSwiper">
             <?php heroSlider() ?>
             <div class="flex absolute bottom-0 right-0">
@@ -16,7 +19,6 @@ get_header(); ?>
                             d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
                             fill="black" />
                     </svg>
-
                 </div>
                 <div class="swiper-button-next bg-white p-12 left-auto right-auto relative">
                     <svg class="absolute" width="27" height="24" viewBox="0 0 27 24" fill="none"
@@ -26,13 +28,11 @@ get_header(); ?>
                             fill="black" />
                     </svg>
                 </div>
-
             </div>
-
         </div>
+    </section>
 
-</div>
-</section>
+
 </div>
 
 <?php get_footer();

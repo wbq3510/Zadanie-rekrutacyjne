@@ -19,7 +19,7 @@
     <div class=''>
         <header id="site-header">
             <div class='container relative mx-auto'>
-                <div class='flex flex-nowrap items-center'>
+                <div class='flex flex-nowrap py-6 lg:py-0 items-center'>
                     <div class='mr-auto'><a href="/">
                             <?php if ( get_field( 'logo', 'option' ) ) : ?>
                             <img src="<?php the_field( 'logo', 'option' ); ?>" />
@@ -46,7 +46,7 @@
                         </button>
 
                         <ul
-                            class="gap-12 items-center flex-col lg:flex-row content-start justify-end lg:flex flex-wrap primary-menu reset-list-style px-6 lg:px-0 hidden fixed bg-primary-100 lg:bg-transparent text-black left-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto min-h-screen lg:min-h-0">
+                            class=" gap-4 lg:gap-12 items-center flex-col transition-all lg:flex-row content-start justify-start lg:justify-end flex lg:flex-wrap primary-menu reset-list-style px-6 lg:px-0 fixed bg-primary-100 max-w-xl lg:max-w-full lg:bg-transparent text-black -right-full lg:right-0 top-0 lg:relative py-16 lg:py-0 w-10/12 lg:w-auto z-30 lg:z-auto h-screen lg:h-auto overflow-y-auto lg:overflow-y-visible lg:min-h-0">
                             <div
                                 class="close-menu lg:hidden flex font-medium cursor-pointer uppercase right-42px top-42px absolute z-50 text-white items-center text-lg">
                                 zamknij
@@ -87,7 +87,7 @@
                     /*                                search widget                               */
                     /* -------------------------------------------------------------------------- */
                     ?>
-                            <div class="search-wrap relative px-6 lg:px-0 my-2 lg:my-0 py-3 lg:py-0"><?php
+                            <div class="search-wrap w-full lg:w-auto relative px-6 lg:px-0 my-2 lg:my-0 py-3 lg:py-0"><?php
                     if ( is_active_sidebar( 'header-search' ) ) : ?>
                                 <div id="search-input" class="hidden absolute left-6 lg:-left-44 top-14 lg:top-11 z-40"
                                     role="complementary">

@@ -33,3 +33,12 @@ close_menu.onclick = function () {
 		button_toggle.setAttribute('aria-expanded', 'true')
 	}
 }
+// open sub menu
+const mobileMenuLink = document.querySelector('.mega-menu > a')
+const mobileMenuLinkSub = document.querySelector('#site-navigation>ul li ul')
+const menuList = document.querySelector('.mega-menu > ul')
+const menuListSub = document.querySelector('#site-navigation>ul li ul li ul')
+
+mobileMenuLink.addEventListener('click', function () {
+	menuList.classList.toggle('active-mobile-mega-menu')
+})
