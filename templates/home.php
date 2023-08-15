@@ -48,9 +48,10 @@ get_header(); ?>
 
     <!-- s3 -->
 
-    <section>
+    <section class=" bg-primary-100 pt-120px">
         <div class="container mx-auto">
-            <div><?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
+            <div class=" text-primary-200 text-xs font-medium mb-3 block">
+                <?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
             <h2><?php the_field( 'naglowek-s3' ); ?></h2>
         </div>
 
@@ -62,26 +63,8 @@ get_header(); ?>
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
+        <button id="show-more-button">Pokaż więcej</button>
 
-        <!-- Dodaj bibliotekę macy.js -->
-        <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
-
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var container = document.getElementById("macy-container");
-            var macy = Macy({
-                container: container,
-                trueOrder: true,
-                waitForImages: false,
-                margin: {
-                    x: 10,
-                    y: 16
-                },
-                columns: 3,
-            });
-        });
-        windows.do
-        </script>
     </section>
 
 </div>
