@@ -7,7 +7,8 @@ Projekty - ACF gallery<br>
 Użyte biblioteki:<br>
 - Swiper.js<br>
 - Macy.js<br>
-- AOS.js<br>
+- AOS.js<br> 
+- GLightbox
 
 Na stronie korzystam ze stworzonych funkcji. Pełnią one rolę modulów dzięki temu elementy można wykorzystywać w przyszłości na stronie bez konieczności duplikowania kodu. Wszystkie funkcje znajdują się w pliku /srcwp/classes.php
 
