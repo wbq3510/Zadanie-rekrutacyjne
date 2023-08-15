@@ -57,6 +57,14 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                     s3                                     */
+/* -------------------------------------------------------------------------- */
+#macy-container.masonyOverlay:after {
+	content: '';
+	@apply absolute bottom-0 w-full h-[40%] pointer-events-none;
+	background: linear-gradient(360deg, #dcc1ab 9%, rgba(214, 183, 158, 0) 100%);
+}
+/* -------------------------------------------------------------------------- */
 /*                                 Animations                                 */
 /* -------------------------------------------------------------------------- */
 @keyframes animationSection {
@@ -84,7 +92,4 @@ body {
 	100% {
 		@apply opacity-50;
 	}
-}
-.hiddenMasonyImg {
-	display: none;
 }

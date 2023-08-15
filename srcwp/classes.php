@@ -81,24 +81,55 @@ function sectionOneBlocks(){ ?>
 /* -------------------------------------------------------------------------- */
 /*                                 Section Two                                */
 /* -------------------------------------------------------------------------- */
-function sectionTwo() { ?>
+function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link="") { ?>
 <section class="s2 relative overflow-x-clip" data-aos="example-anim1">
     <div class="flex relative bg-no-repeat overflow-hidden">
         <div class="animationSection s2Content container mx-auto flex-col md:flex-row flex justify-end">
-            <div style="background-image: url(<?php the_field('obraz-s2'); ?>);"
+            <div style="background-image: url(<?php the_field($obraz); ?>);"
                 class="z-0 order-2 md:order-1 h-96 md:h-full top-0 bg-no-repeat w-full md:w-1/2 bg-cover md:absolute left-0">
             </div>
             <div class="relative md:pl-12 lg:pl-40 w-full md:w-1/2 pt-20 pb-12 md:py-20 2xl:py-24">
                 <div class="z-10 relative text-white">
-                    <div class="mb-4"> <?php the_field( 'tekst_nad_naglowkiem-s2' ); ?></div>
-                    <h2 class="mb-10 max-w-[250px]"><?php the_field( 'naglowek-s2' ); ?></h2>
-                    <?php the_field( 'opis-s2' ); ?>
-                    <a class="btn-two border-white text-white mt-72px" href="<?php the_field( 'link-s2' ); ?>">Poznaj
+                    <div class="mb-4"> <?php the_field( $nad_naglowkiem ); ?></div>
+                    <h2 class="mb-10 max-w-[250px]"><?php the_field( $naglowek ); ?></h2>
+                    <?php the_field( $opis ); ?>
+                    <a class="btn-two border-white text-white mt-72px" href="<?php the_field( $link ); ?>">Poznaj
                         nas
                         bliżej</a>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<?php }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Gallery                                  */
+/* -------------------------------------------------------------------------- */
+function gallery($naglowek="", $obrazki=""){ ?>
+<section class=" bg-primary-100 pt-120px">
+    <div class="container mx-auto">
+        <div class=" text-primary-200 text-xs font-medium mb-3 block">
+            <?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
+        <h2 class=" mb-24"><?php the_field( $naglowek ); ?></h2>
+    </div>
+    <div id="macy-container" class="gallery masonyOverlay" data-aos="fade-up">
+        <?php $obrazki_urls = get_field( $obrazki ); ?>
+        <?php if ( $obrazki_urls ) :  ?>
+        <?php foreach ( $obrazki_urls as $obrazki_url ): ?>
+        <img class="glightbox cursor-pointer" data-gallery="gallery1" src="<?php echo esc_url( $obrazki_url ); ?>" />
+        <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+    <div class="w-full flex justify-center items-center"> <button id="showMoreButton"
+            class="btn-two border-black text-black -mt-72 relative">Rozwiń <svg class="ml-2" width="16" height="17"
+                viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+                    fill="#111111" />
+            </svg>
+        </button>
     </div>
 </section>
 <?php }

@@ -44,35 +44,10 @@ get_header(); ?>
     </section>
 
     <!-- s2 -->
-    <?php sectionTwo() ?>
+    <?php sectionTwo($obraz="obraz-s2", $nad_naglowkiem="tekst_nad_naglowkiem-s2", $naglowek="naglowek-s2", $opis="opis-s2", $link="link-s2") ?>
 
     <!-- s3 -->
-
-    <section class=" bg-primary-100 pt-120px">
-        <div class="container mx-auto">
-            <div class=" text-primary-200 text-xs font-medium mb-3 block">
-                <?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
-            <h2 class=" mb-24"><?php the_field( 'naglowek-s3' ); ?></h2>
-        </div>
-
-        <div id="macy-container">
-            <?php $obrazki_urls = get_field( 'obrazki' ); ?>
-            <?php if ( $obrazki_urls ) :  ?>
-            <?php foreach ( $obrazki_urls as $obrazki_url ): ?>
-            <img src="<?php echo esc_url( $obrazki_url ); ?>" />
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-        <button id="showMoreButton"
-            class="btn-two border-black text-black absolute left-0 right-0 m-auto bottom-52">Rozwiń <svg class="ml-2"
-                width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
-                    fill="#111111" />
-            </svg>
-        </button>
-
-    </section>
+    <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
 
 </div>
 
