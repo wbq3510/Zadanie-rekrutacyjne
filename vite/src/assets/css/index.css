@@ -6,7 +6,7 @@ body.overlay {
 }
 body.overlay:after {
 	content: '';
-	@apply bg-black min-h-screen h-full w-full absolute top-[68px] z-[1] transition-all;
+	@apply hidden lg:block bg-primary-black min-h-screen h-full w-full absolute top-[68px] z-[1] transition-all;
 	animation: opacity 0.3s linear forwards;
 }
 body {
@@ -19,14 +19,21 @@ body {
 	content: '';
 	transform: translate(0, -50%);
 	animation: animationHero 1s linear forwards;
-	@apply min-w-full min-h-full w-[50vw] h-auto absolute top-1/2 left-1/2 bg-primary-100 -z-10;
+	@apply min-w-full min-h-full w-full lg:w-[50vw] h-auto absolute top-1/2 left-0 lg:left-1/2 bg-primary-100 -z-10;
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
 	@apply hidden;
 }
-
+.swiper-button-next,
+.swiper-button-prev {
+	@apply hover:!bg-primary-200 transition-all;
+}
+.swiper-button-next:hover svg path,
+.swiper-button-prev:hover svg path {
+	@apply fill-primary-white;
+}
 /* -------------------------------------------------------------------------- */
 /*                                     s1                                     */
 /* -------------------------------------------------------------------------- */
@@ -39,7 +46,7 @@ body {
 }
 .box-hover:hover {
 	box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
-	transform: translateY(-4px);
+	@apply lg:translate-y-1;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -54,7 +61,7 @@ body {
 	content: '';
 	transform: translateY(-50%);
 	animation: animationSection 1s linear forwards;
-	@apply absolute top-1/2 -left-1/2 h-auto min-h-full w-[50vw] min-w-full bg-primary-200 z-[1];
+	@apply absolute top-1/2 left-0 lg:-left-1/2 h-auto min-h-full w-full lg:w-[50vw] min-w-full bg-primary-200 z-[1];
 }
 
 /* -------------------------------------------------------------------------- */
@@ -65,32 +72,42 @@ body {
 	@apply absolute bottom-0 w-full h-[40%] pointer-events-none;
 	background: linear-gradient(360deg, #dcc1ab 9%, rgba(214, 183, 158, 0) 100%);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   footer                                   */
+/* -------------------------------------------------------------------------- */
+footer a {
+	@apply hover:underline;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                 Animations                                 */
 /* -------------------------------------------------------------------------- */
-@keyframes animationSection {
-	0% {
-		@apply -left-1/2;
+@media screen(lg) {
+	@keyframes animationSection {
+		0% {
+			@apply -left-1/2;
+		}
+		100% {
+			left: 50%;
+			@apply left-1/2;
+		}
 	}
-	100% {
-		left: 50%;
-		@apply left-1/2;
+	@keyframes animationHero {
+		0% {
+			@apply left-1/2;
+		}
+		100% {
+			@apply -left-1/2;
+		}
 	}
-}
-@keyframes animationHero {
-	0% {
-		@apply left-1/2;
-	}
-	100% {
-		@apply -left-1/2;
-	}
-}
-@keyframes opacity {
-	0% {
-		@apply opacity-0;
-	}
+	@keyframes opacity {
+		0% {
+			@apply opacity-0;
+		}
 
-	100% {
-		@apply opacity-50;
+		100% {
+			@apply opacity-50;
+		}
 	}
 }

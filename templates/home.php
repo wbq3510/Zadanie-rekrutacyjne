@@ -37,7 +37,7 @@ get_header(); ?>
         <div class="container mx-auto">
             <div class="lg:ml-28 lg:max-w-[709px]">
                 <span
-                    class=" text-primary-200 text-xs font-medium mb-4 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
+                    class=" text-primary-200 text-sm sm:text-xs font-medium mb-4 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
                 <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
                 <div class="pb-24 text-lg"><?php the_field( 'opis-s1' ); ?></div>
             </div>

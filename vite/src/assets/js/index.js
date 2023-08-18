@@ -6,6 +6,7 @@ import './glightbox'
 // AOS animation
 AOS.init({
 	duration: 1000,
+	disable: 'mobile',
 })
 
 const searchIcon = document.querySelector('#search-icon')

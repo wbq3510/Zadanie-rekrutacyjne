@@ -10,19 +10,19 @@ function heroSlider(){ ?>
     <div class="swiper-slide">
         <div class="flex flex-col lg:flex-row">
             <!-- left col -->
-            <div class="container mx-auto lg:min-h-[734px]">
+            <div class="container mx-auto lg:min-h-[734px] py-20 lg:py-0">
                 <div
                     class="w-full lg:max-w-[513px] lg:w-1/2 h-full flex flex-col justify-center animation-hero-left-col">
                     <h2 class="text-6xl mb-11">
                         <?php the_sub_field( 'naglowek' ); ?>
                     </h2>
-                    <div class="mb-72px lg:max-w-[441px]"><?php the_sub_field( 'opis' ); ?></div>
-                    <div class="flex flex-wrap gap-x-9 gap-y-4">
+                    <div class="mb-14 sm:mb-72px lg:max-w-[441px]"><?php the_sub_field( 'opis' ); ?></div>
+                    <div class="flex flex-wrap sm:gap-x-9 gap-x-4 gap-y-4 sm:gap-y-4">
                         <a class="btn-one"
                             href=" <?php the_sub_field( 'link_do_przycisku_nr1' ); ?>"><?php the_sub_field( 'tekst_przycisku_nr1' ); ?></a>
                         <a class="btn-two" href="<?php the_sub_field( 'link_do_przycisku_nr2' ); ?>">
-                            <?php the_sub_field( 'tekst_przycisku_nr2' ); ?> <svg class=" ml-2" width="16" height="17"
-                                viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <?php the_sub_field( 'tekst_przycisku_nr2' ); ?> <svg class="w-4 ml-2" width="16"
+                                height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
                                     fill="#1B5B31" />
@@ -32,7 +32,7 @@ function heroSlider(){ ?>
                 </div>
             </div>
             <!-- right col -->
-            <div class="lg:absolute lg:left-1/2 w-full lg:w-[50vw] min-h-[300px] lg:h-full bg-cover lg:-z-20"
+            <div class="lg:absolute lg:left-1/2 w-full lg:w-[50vw] min-h-[300px] sm:min-h-[360px] lg:min-h-[300px] lg:h-full bg-cover lg:-z-20"
                 style="background-image: url(<?php the_sub_field('obraz'); ?>);">
             </div>
         </div>
@@ -47,7 +47,7 @@ function heroSlider(){ ?>
 /*                             Section one (bloks)                            */
 /* -------------------------------------------------------------------------- */
 function sectionOneBlocks(){ ?>
-<div class="flex gap-16" data-aos="fade-up">
+<div class="flex flex-col lg:flex-row gap-4 lg:gap-6 xl:gap-16" data-aos="fade-up">
     <?php if ( have_rows( 'kafle' ) ) : ?>
     <?php while ( have_rows( 'kafle' ) ) : the_row(); ?>
     <div class="flex flex-col bg-white rounded-[28px] box-hover transition-all">
@@ -88,12 +88,12 @@ function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link
             <div style="background-image: url(<?php the_field($obraz); ?>);"
                 class="z-0 order-2 md:order-1 h-96 md:h-full top-0 bg-no-repeat w-full md:w-1/2 bg-cover md:absolute left-0">
             </div>
-            <div class="relative md:pl-12 lg:pl-40 w-full md:w-1/2 pt-20 pb-12 md:py-20 2xl:py-24">
+            <div class="relative md:pl-12 lg:pl-20 xl:pl-40 w-full md:w-1/2 pt-20 pb-12 md:py-20 2xl:py-24">
                 <div class="z-10 relative text-primary-white">
                     <div class="mb-4"> <?php the_field( $nad_naglowkiem ); ?></div>
                     <h2 class="mb-10 max-w-[250px]"><?php the_field( $naglowek ); ?></h2>
                     <?php the_field( $opis ); ?>
-                    <a class="btn-two border-white text-primary-white mt-72px"
+                    <a class="btn-two border-white text-primary-white mt-72px hover:bg-primary-white hover:text-primary-black"
                         href="<?php the_field( $link ); ?>">Poznaj
                         nas
                         bliżej</a>
@@ -126,8 +126,8 @@ function gallery($naglowek="", $obrazki=""){ ?>
         <?php endif; ?>
     </div>
     <div class="w-full flex justify-center items-center absolute"> <button id="showMoreButton"
-            class="btn-two border-black text-black -mt-72 relative">Rozwiń <svg class="ml-2" width="16" height="17"
-                viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            class="btn-two border-black text-black -mt-72 relative hover:bg-primary-200 hover:border-primary-200 hover:text-primary-white">Rozwiń
+            <svg class="ml-2" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
                     fill="#111111" />
@@ -152,7 +152,7 @@ function cta($naglowek="", $topBtnText="", $ctaLink=""){ ?>
         </div>
         <div>
             <div class=" text-primary-white"><?php the_field( $topBtnText ); ?>
-                <a class="btn-one px-6 py-10px mt-6 text-primary-200 bg-white"
+                <a class="btn-one px-6 py-10px mt-6 text-primary-200 bg-white hover:bg-primary-black hover:border-primary-black hover:text-primary-white"
                     href="<?php the_field( $ctaLink ); ?>">Instagram</a>
             </div>
         </div>

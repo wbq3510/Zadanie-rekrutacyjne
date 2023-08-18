@@ -3,11 +3,11 @@
         <div class='flex flex-wrap justify-between lg:-mx-0 pb-16 border-b border-solid border-primary-white'>
             <div class='w-full lg:w-3/12 lg:px-0'>
                 <?php if ( get_field( 'logo_white', 'option' ) ) : ?>
-                <img src="<?php the_field( 'logo_white', 'option' ); ?>" />
+                <a href="/"><img src="<?php the_field( 'logo_white', 'option' ); ?>" /></a>
                 <?php endif ?>
             </div>
-            <div class="text-primary-white">Daj znać, co możemy dla Ciebie zrobić! <a class="btn-one ml-6"
-                    href="#">Skontaktuj się z nami</a></div>
+            <div class="text-primary-white">Daj znać, co możemy dla Ciebie zrobić! <a
+                    class="btn-one ml-6 hover:no-underline" href="#">Skontaktuj się z nami</a></div>
         </div>
         <div class=" pt-16 flex justify-between">
             <div class='w-full lg:w-3/12 lg:px-0 text-primary-white flex list-none gap-12'>

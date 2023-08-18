@@ -22,7 +22,7 @@ html {
 	font-family: 'Inter', sans-serif;
 }
 body {
-	@apply text-base antialiased leading-relaxed text-black;
+	@apply text-base antialiased leading-relaxed text-primary-black;
 	font-family: 'Inter', sans-serif;
 }
 h1,
@@ -33,11 +33,11 @@ h5 {
 	font-family: 'Montserrat', sans-serif;
 }
 h1 {
-	@apply text-2xl lg:text-4xl;
+	@apply text-4xl;
 }
 
 h2 {
-	@apply text-xl lg:text-5xl;
+	@apply text-5xl;
 }
 
 h3 {
@@ -49,8 +49,20 @@ h4 {
 }
 
 .btn-one {
-	@apply border-solid border-primary-200 border rounded-full bg-primary-200 text-primary-white py-3 px-6 inline-flex items-center justify-center w-fit;
+	@apply border-solid border-primary-200 hover:bg-primary-white hover:text-primary-200 transition-all border rounded-full bg-primary-200 text-primary-white py-3 px-6 inline-flex items-center justify-center w-fit;
 }
 .btn-two {
-	@apply border-solid border-primary-200 border rounded-full bg-transparent text-primary-200 py-3 px-6 inline-flex items-center justify-center w-fit;
+	@apply border-solid border-primary-200 hover:bg-primary-black transition-all hover:text-primary-white border rounded-full bg-transparent text-primary-200 py-3 px-6 inline-flex items-center justify-center w-fit;
+}
+.btn-two svg {
+	@apply transition-all;
+}
+.btn-two:hover svg {
+	@apply rotate-45;
+}
+.btn-two:hover svg path {
+	@apply fill-primary-white;
+}
+:focus-visible {
+	@apply outline-none border-primary-200;
 }

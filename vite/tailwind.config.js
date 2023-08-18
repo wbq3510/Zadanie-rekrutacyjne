@@ -29,6 +29,7 @@ module.exports = {
 					200: '#1B5B31',
 					300: '#F5F0EC',
 					white: '#F5F0EC',
+					black: '#111',
 				},
 			},
 			spacing: {
