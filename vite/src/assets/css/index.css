@@ -38,7 +38,8 @@ body {
 	@apply w-full absolute bg-primary-200 h-[1px] -bottom-1 left-0;
 }
 .box-hover:hover {
-	box-shadow: 9px 11px 29px #1b5b312f;
+	box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+	transform: translateY(-4px);
 }
 
 /* -------------------------------------------------------------------------- */

@@ -47,7 +47,7 @@ function heroSlider(){ ?>
 /*                             Section one (bloks)                            */
 /* -------------------------------------------------------------------------- */
 function sectionOneBlocks(){ ?>
-<div class="flex gap-16">
+<div class="flex gap-16" data-aos="fade-up">
     <?php if ( have_rows( 'kafle' ) ) : ?>
     <?php while ( have_rows( 'kafle' ) ) : the_row(); ?>
     <div class="flex flex-col bg-white rounded-[28px] box-hover transition-all">
@@ -89,11 +89,12 @@ function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link
                 class="z-0 order-2 md:order-1 h-96 md:h-full top-0 bg-no-repeat w-full md:w-1/2 bg-cover md:absolute left-0">
             </div>
             <div class="relative md:pl-12 lg:pl-40 w-full md:w-1/2 pt-20 pb-12 md:py-20 2xl:py-24">
-                <div class="z-10 relative text-white">
+                <div class="z-10 relative text-primary-white">
                     <div class="mb-4"> <?php the_field( $nad_naglowkiem ); ?></div>
                     <h2 class="mb-10 max-w-[250px]"><?php the_field( $naglowek ); ?></h2>
                     <?php the_field( $opis ); ?>
-                    <a class="btn-two border-white text-white mt-72px" href="<?php the_field( $link ); ?>">Poznaj
+                    <a class="btn-two border-white text-primary-white mt-72px"
+                        href="<?php the_field( $link ); ?>">Poznaj
                         nas
                         bliżej</a>
                 </div>
@@ -110,9 +111,11 @@ function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link
 function gallery($naglowek="", $obrazki=""){ ?>
 <section class=" bg-primary-100 pt-120px">
     <div class="container mx-auto">
-        <div class=" text-primary-200 text-xs font-medium mb-3 block">
-            <?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
-        <h2 class=" mb-24"><?php the_field( $naglowek ); ?></h2>
+        <div class="lg:ml-24">
+            <div class=" text-primary-200 text-xs font-medium mb-3 block">
+                <?php the_field( 'tekst_nad_naglowkiem-s3' ); ?></div>
+            <h2 class=" mb-24"><?php the_field( $naglowek ); ?></h2>
+        </div>
     </div>
     <div id="macy-container" class="gallery masonyOverlay" data-aos="fade-up">
         <?php $obrazki_urls = get_field( $obrazki ); ?>
@@ -122,7 +125,7 @@ function gallery($naglowek="", $obrazki=""){ ?>
         <?php endforeach; ?>
         <?php endif; ?>
     </div>
-    <div class="w-full flex justify-center items-center"> <button id="showMoreButton"
+    <div class="w-full flex justify-center items-center absolute"> <button id="showMoreButton"
             class="btn-two border-black text-black -mt-72 relative">Rozwiń <svg class="ml-2" width="16" height="17"
                 viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -136,8 +139,26 @@ function gallery($naglowek="", $obrazki=""){ ?>
 
 
 
-
-
+/* -------------------------------------------------------------------------- */
+/*                                     CTA                                    */
+/* -------------------------------------------------------------------------- */
+function cta($naglowek="", $topBtnText="", $ctaLink=""){ ?>
+<section class="mt-60px">
+    <div class="bg-primary-200 justify-between max-w-[1040px] container mx-auto flex items-center px-110px py-120px">
+        <div class="max-w-[600px] w-full">
+            <h2 class="text-primary-white text-40px font-normal">
+                <?php the_field( $naglowek ); ?>
+            </h2>
+        </div>
+        <div>
+            <div class=" text-primary-white"><?php the_field( $topBtnText ); ?>
+                <a class="btn-one px-6 py-10px mt-6 text-primary-200 bg-white"
+                    href="<?php the_field( $ctaLink ); ?>">Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+<?php }
 
 add_filter( 'body_class', function( $classes ) {
 	if ( is_singular( ['post', 'page'] ) ) {

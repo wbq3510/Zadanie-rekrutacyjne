@@ -3,7 +3,6 @@ import './navigation'
 import './swiper'
 import './masony'
 import './glightbox'
-
 // AOS animation
 AOS.init({
 	duration: 1000,

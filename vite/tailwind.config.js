@@ -19,6 +19,7 @@ module.exports = {
 			},
 			fontSize: {
 				'28px': ['1.75rem', '2.0125rem'],
+				'40px': ['2.5rem', '3rem'],
 			},
 
 			colors: {
@@ -27,6 +28,7 @@ module.exports = {
 					100: '#DCC1AB',
 					200: '#1B5B31',
 					300: '#F5F0EC',
+					white: '#F5F0EC',
 				},
 			},
 			spacing: {
@@ -37,6 +39,8 @@ module.exports = {
 				'18px': '1.125rem',
 				'120px': '7.5rem',
 				'34px': '2.125rem',
+				'110px': '6.875rem',
+				'60px': '3.75rem',
 			},
 			lineHeight: {},
 			boxShadow: {},

@@ -35,10 +35,12 @@ get_header(); ?>
     <!-- S1 -->
     <section class="pb-40 pt-120px bg-primary-300">
         <div class="container mx-auto">
-            <span
-                class=" text-primary-200 text-xs font-medium mb-3 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
-            <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
-            <div class="pb-24"><?php the_field( 'opis-s1' ); ?></div>
+            <div class="lg:ml-28 lg:max-w-[709px]">
+                <span
+                    class=" text-primary-200 text-xs font-medium mb-4 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
+                <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
+                <div class="pb-24 text-lg"><?php the_field( 'opis-s1' ); ?></div>
+            </div>
             <?php sectionOneBlocks() ?>
         </div>
     </section>
@@ -49,6 +51,11 @@ get_header(); ?>
     <!-- s3 -->
     <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
 
+    <!-- cta -->
+    <?php cta($naglowek="naglowek-cta", $topBtnText="tekst_nad_buttonem", $ctaLink="link-cta") ?>
+
 </div>
 
 <?php get_footer();
+
+?>
