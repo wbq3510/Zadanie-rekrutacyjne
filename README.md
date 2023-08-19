@@ -1,7 +1,7 @@
 # Zadanie-rekrutacyjne
 <img src="https://i.ibb.co/YQKZJSp/Pendulums.png">
 Wszystkie treści na stronie są dynamicznie powiązane z ACF. <br>
-Hero - repeater<br>
+Hero - Repeater<br>
 Projekty - ACF gallery<br>
 
 Użyte biblioteki:<br>
@@ -10,7 +10,7 @@ Użyte biblioteki:<br>
 - AOS.js<br> 
 - GLightbox
 
-Na stronie korzystam ze stworzonych funkcji. Pełnią one rolę modulów dzięki temu elementy można wykorzystywać w przyszłości na stronie bez konieczności duplikowania kodu. Wszystkie funkcje znajdują się w pliku /srcwp/classes.php
+Na stronie korzystam ze stworzonych funkcji. Pełnią one rolę modulów, dzięki temu elementy można wykorzystywać w przyszłości na stronie bez konieczności duplikowania kodu. Wszystkie funkcje użyte w pliku templates/home.php znajdują się w pliku /srcwp/classes.php 
 
 CSS:<br>
 - vite/src/assets/css/base.css - ogólne style <br>
@@ -21,4 +21,6 @@ JS:<br>
 - vite/src/assets/js/index.js - główny plik ze skryptami<br>
 - vite/src/assets/js/navigation.js - burger menu<br>
 - vite/src/assets/js/swiper.js - ustawienia swiperów (hero)<br>
+- vite/src/assets/js/masony.js - ustawienia dla Macy.js oraz galerii.
+- vite/src/assets/js/glightbox - ustawienia lightboxa
 
