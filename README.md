@@ -23,8 +23,3 @@ JS:<br>
 - vite/src/assets/js/swiper.js - ustawienia swiperów (hero)<br>
 - vite/src/assets/js/masony.js - ustawienia dla Macy.js oraz galerii.
 - vite/src/assets/js/glightbox - ustawienia lightboxa
-
-  Dane do wp-admin:
-  admin
-  adRespect#201P
-
