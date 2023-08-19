@@ -22,7 +22,7 @@ html {
 	font-family: 'Inter', sans-serif;
 }
 body {
-	@apply text-base antialiased leading-relaxed text-primary-black;
+	@apply text-base antialiased leading-relaxed text-primary-black -tracking-13px;
 	font-family: 'Inter', sans-serif;
 }
 h1,
@@ -31,6 +31,7 @@ h3,
 h4,
 h5 {
 	font-family: 'Montserrat', sans-serif;
+	@apply -tracking-1.44px;
 }
 h1 {
 	@apply text-4xl;

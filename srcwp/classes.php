@@ -82,12 +82,12 @@ function sectionOneBlocks(){ ?>
 /*                                 Section Two                                */
 /* -------------------------------------------------------------------------- */
 function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link="") { ?>
-<div class="flex relative bg-no-repeat overflow-hidden">
-    <div class="animationSection s2Content container mx-auto flex-col md:flex-row flex justify-end">
+<div class="flex relative bg-no-repeat overflow-hidden flex-col sm:flex-row">
+    <div class="animationSection s2Content container mx-auto flex-col sm:flex-row flex justify-end">
         <div style="background-image: url(<?php the_field($obraz); ?>);"
-            class="z-0 order-2 md:order-1 h-96 md:h-full top-0 bg-no-repeat w-full md:w-1/2 bg-cover md:absolute left-0">
+            class="hidden sm:block z-10 lg:z-0 order-2 sm:order-1 h-96 sm:h-full top-0 bg-no-repeat w-full sm:w-1/2 bg-cover sm:absolute left-0">
         </div>
-        <div class="relative md:pl-12 lg:pl-20 xl:pl-40 w-full md:w-1/2 pt-20 pb-12 md:py-20 2xl:py-24">
+        <div class="relative sm:pl-12 lg:pl-20 xl:pl-40 w-full sm:w-1/2 pt-20 pb-12 sm:py-20 2xl:py-24">
             <div class="z-10 relative text-primary-white">
                 <div class="mb-4"> <?php the_field( $nad_naglowkiem ); ?></div>
                 <h2 class="mb-10 max-w-[250px]"><?php the_field( $naglowek ); ?></h2>
@@ -99,6 +99,7 @@ function sectionTwo($obraz="", $nad_naglowkiem="", $naglowek="", $opis="", $link
             </div>
         </div>
     </div>
+    <img class="sm:hidden z-10" src="<?php the_field($obraz); ?>" alt="">
 </div>
 <?php }
 
@@ -140,7 +141,8 @@ function gallery($naglowek="", $obrazki=""){ ?>
 /* -------------------------------------------------------------------------- */
 function cta($naglowek="", $topBtnText="", $ctaLink=""){ ?>
 <section class="mt-60px">
-    <div class="bg-primary-200 justify-between max-w-[1040px] container mx-auto flex items-center px-110px py-120px">
+    <div
+        class="bg-primary-200 justify-between max-w-[1040px] container mx-auto flex items-center px-10 sm:px-110px py-10 gap-6 sm:gap-0 sm:py-120px flex-col sm:flex-row">
         <div class="max-w-[600px] w-full">
             <h2 class="text-primary-white text-40px font-normal">
                 <?php the_field( $naglowek ); ?>

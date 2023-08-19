@@ -38,26 +38,27 @@ get_header(); ?>
             <div class="lg:ml-28 lg:max-w-[709px]">
                 <span
                     class=" text-primary-200 text-sm sm:text-xs font-medium mb-4 block"><?php the_field( 'tekst_nad_naglowkiem-s1' ); ?></span>
-                <h2 class="pb-8"><?php the_field( 'naglowek-s1' ); ?></h2>
-                <div class="pb-24 text-lg"><?php the_field( 'opis-s1' ); ?></div>
+                <h2 class="pb-8><?php the_field( 'naglowek-s1' ); ?></h2>
+                <div class=" pb-24 text-lg"><?php the_field( 'opis-s1' ); ?>
             </div>
-            <?php sectionOneBlocks() ?>
         </div>
-    </section>
+        <?php sectionOneBlocks() ?>
+</div>
+</section>
 
-    <!-- s2 -->
-    <section id="ofirmie" class="s2 relative overflow-x-clip" data-aos="example-anim1">
-        <?php sectionTwo($obraz="obraz-s2", $nad_naglowkiem="tekst_nad_naglowkiem-s2", $naglowek="naglowek-s2", $opis="opis-s2", $link="link-s2") ?>
-    </section>
+<!-- s2 -->
+<section id="ofirmie" class="s2 relative overflow-x-clip" data-aos="example-anim1">
+    <?php sectionTwo($obraz="obraz-s2", $nad_naglowkiem="tekst_nad_naglowkiem-s2", $naglowek="naglowek-s2", $opis="opis-s2", $link="link-s2") ?>
+</section>
 
-    <!-- s3 -->
-    <section id="realizacje" class=" bg-primary-100 pt-120px">
-        <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
-    </section>
+<!-- s3 -->
+<section id="realizacje" class=" bg-primary-100 pt-20 md:pt-120px">
+    <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
+</section>
 
 
-    <!-- cta -->
-    <?php cta($naglowek="naglowek-cta", $topBtnText="tekst_nad_buttonem", $ctaLink="link-cta") ?>
+<!-- cta -->
+<?php cta($naglowek="naglowek-cta", $topBtnText="tekst_nad_buttonem", $ctaLink="link-cta") ?>
 
 </div>
 

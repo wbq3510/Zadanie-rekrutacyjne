@@ -46,6 +46,10 @@ module.exports = {
 			lineHeight: {},
 			boxShadow: {},
 		},
+		letterSpacing: {
+			'-13px': '-0.0081rem',
+			'-1.44px': '-0.09rem',
+		},
 	},
 	variants: {
 		extend: {},
