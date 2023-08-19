@@ -1,5 +1,5 @@
 # Zadanie-rekrutacyjne
-<img src="https://i.ibb.co/YQKZJSp/Pendulums.png">
+<img src="https://i.ibb.co/H2HwHNx/Pendulums.png">
 Wszystkie treści na stronie są dynamicznie powiązane z ACF. <br>
 Hero - Repeater<br>
 Projekty - ACF gallery<br>
