@@ -123,14 +123,3 @@ function wpb_widgets_init() {
  
 }
 add_action( 'widgets_init', 'wpb_widgets_init' );
-
-// Dodawanie strzałek do pozycji menu z podmenu
-function add_submenu_arrows($item_output, $item, $depth, $args) {
-    // Sprawdzamy, czy element ma podmenu i jest poziomu 0 (główna pozycja menu)
-    if ($args->theme_location == 'primary_menu' && $depth === 0 && in_array('menu-item-has-children', $item->classes)) {
-        // Dodajemy strzałkę do elementu
-        $item_output .= '<span class="submenu-arrow">▼</span>';
-    }
-    return $item_output;
-}
-add_filter('walker_nav_menu_start_el', 'add_submenu_arrows', 10, 4);
