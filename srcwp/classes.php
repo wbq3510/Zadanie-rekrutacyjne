@@ -32,7 +32,7 @@ function heroSlider(){ ?>
                 </div>
             </div>
             <!-- right col -->
-            <div class="lg:absolute lg:left-1/2 w-full lg:w-[50vw] min-h-[300px] sm:min-h-[360px] lg:min-h-[300px] lg:h-full bg-cover lg:-z-20"
+            <div class="lg:absolute lg:left-1/2 w-full lg:w-[50vw] min-h-[370px] sm:min-h-[360px] md:min-h-[400px] lg:min-h-full lg:h-full bg-cover lg:-z-20 bg-center"
                 style="background-image: url(<?php the_sub_field('obraz'); ?>);">
             </div>
         </div>
@@ -142,15 +142,16 @@ function gallery($naglowek="", $obrazki=""){ ?>
 function cta($naglowek="", $topBtnText="", $ctaLink=""){ ?>
 <section class="mt-60px">
     <div
-        class="bg-primary-200 justify-between max-w-[1040px] container mx-auto flex items-center px-10 sm:px-110px py-10 gap-6 sm:gap-0 sm:py-120px flex-col sm:flex-row">
+        class="bg-primary-200 justify-between max-w-[1040px] container mx-auto flex items-center sm:items-end px-10 sm:px-110px py-10 gap-6 sm:gap-4 sm:py-120px flex-col sm:flex-row">
         <div class="max-w-[600px] w-full">
             <h2 class="text-primary-white text-40px font-normal">
                 <?php the_field( $naglowek ); ?>
             </h2>
         </div>
-        <div>
-            <div class=" text-primary-white"><?php the_field( $topBtnText ); ?>
-                <a class="btn-one px-6 py-10px mt-6 text-primary-200 bg-white hover:bg-primary-black hover:border-primary-black hover:text-primary-white"
+        <div class="w-full sm:w-auto min-w-[128px]">
+            <div class=" text-primary-white flex sm:block items-center justify-between">
+                <?php the_field( $topBtnText ); ?>
+                <a class="btn-one px-6 py-10px sm:mt-6 text-primary-200 bg-white hover:bg-primary-black hover:border-primary-black hover:text-primary-white"
                     href="<?php the_field( $ctaLink ); ?>">Instagram</a>
             </div>
         </div>

@@ -6,7 +6,6 @@ import './glightbox'
 // AOS animation
 AOS.init({
 	duration: 1000,
-	disable: 'mobile',
 })
 
 const searchIcon = document.querySelector('#search-icon')
@@ -28,18 +27,6 @@ megaMenu.addEventListener('mouseover', function (e) {
 megaMenu.addEventListener('mouseleave', function (e) {
 	body.classList.remove('overlay')
 })
-// overlay box
-// boxHovers.forEach(boxHover => {
-// 	boxHover.addEventListener('mouseover', () => {
-// 		body.classList.add('overlay')
-// 		boxHover.classList.add('z-50')
-// 	})
-
-// 	boxHover.addEventListener('mouseout', () => {
-// 		body.classList.remove('overlay')
-// 		boxHover.classList.remove('z-10')
-// 	})
-// })
 
 // sticky menu
 window.addEventListener('scroll', function (e) {
