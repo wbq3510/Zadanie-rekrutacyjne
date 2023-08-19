@@ -8,13 +8,28 @@
 	@apply right-0 !important;
 }
 #site-navigation li a {
-	@apply text-lg lg:text-sm text-primary-white md:text-primary-black px-6 lg:px-0 my-2 lg:my-0 lg:py-0 flex hover:cursor-pointer;
+	@apply text-lg lg:text-sm text-primary-white lg:text-primary-black px-6 lg:px-0 my-2 lg:my-0 lg:py-0 flex hover:cursor-pointer;
 }
 #site-navigation > ul li {
 	@apply w-full lg:w-auto;
 }
 #site-navigation li.current-menu-item a {
 	@apply bg-black bg-opacity-5 lg:bg-transparent rounded lg:rounded-none;
+}
+.mega-menu {
+	@apply flex flex-col;
+}
+.mega-menu a .arrow-sub-mobile {
+	@apply flex;
+}
+.mega-menu ul .arrow-sub-mobile {
+	@apply hidden;
+}
+.arrow-sub-mobile {
+	@apply px-4 h-full items-center;
+}
+.arrow-sub-mobile {
+	@apply lg:!hidden;
 }
 .mega-menu > ul {
 	@apply hidden lg:flex flex-col lg:flex-row;
@@ -25,19 +40,18 @@
 header nav ul li .menu-item-has-children a:after {
 	@apply hidden;
 }
-#site-navigation > ul li ul {
-	@apply !pl-10px;
-}
 .menu-item-has-children:hover:after {
 	@apply rotate-180;
 }
-.menu-item-has-children a:after {
+.arrow-sub-mobile:after {
 	content: '';
 	@apply transition-all w-[8px] h-[5px] ml-[.4375rem] block bg-no-repeat;
 	background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.130175 0.81427C-0.0433916 0.640703 -0.0433916 0.359297 0.130175 0.18573C0.287962 0.0279429 0.534874 0.0135984 0.708866 0.142697L0.758714 0.18573L4 3.42681L7.24129 0.18573C7.39907 0.0279429 7.64599 0.0135984 7.81998 0.142697L7.86983 0.18573C8.02761 0.343518 8.04196 0.59043 7.91286 0.764422L7.86983 0.81427L4.31427 4.36983C4.15648 4.52761 3.90957 4.54196 3.73558 4.41286L3.68573 4.36983L0.130175 0.81427Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 @media screen(lg) {
 	.menu-item-has-children a:after {
+		content: '';
+		@apply transition-all w-[8px] h-[5px] ml-[.4375rem] block bg-no-repeat;
 		background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.130175 0.81427C-0.0433916 0.640703 -0.0433916 0.359297 0.130175 0.18573C0.287962 0.0279427 0.534874 0.0135984 0.708866 0.142697L0.758714 0.18573L4 3.42681L7.24129 0.18573C7.39907 0.0279427 7.64599 0.0135984 7.81998 0.142697L7.86983 0.18573C8.02761 0.343518 8.04196 0.59043 7.91286 0.764422L7.86983 0.81427L4.31427 4.36983C4.15648 4.52761 3.90957 4.54196 3.73558 4.41286L3.68573 4.36983L0.130175 0.81427Z' fill='%23111111'/%3E%3C/svg%3E%0A");
 	}
 }
@@ -89,4 +103,31 @@ header nav ul li ul li ul li {
 
 .stickyBody {
 	@apply pt-[68px];
+}
+nav > ul > li > a {
+	@apply relative;
+}
+nav > ul > li > a::before {
+	content: '';
+	@apply bg-primary-200 hidden lg:block absolute left-0 -bottom-1 w-0 h-[1px] -z-10 transition-all;
+}
+
+nav > ul > li > a:hover::before {
+	@apply -bottom-[5px] h-[1px] w-full;
+}
+nav ul li > ul li > a {
+	@apply relative lg:!pl-10px;
+}
+
+nav ul li > ul > li > ul li a {
+	@apply relative lg:!pl-0;
+}
+#site-navigation > ul li ul li ul {
+	@apply lg:!pl-10px;
+}
+#site-navigation > ul li ul li ul {
+	@apply lg:!pl-10px;
+}
+#site-navigation > ul li ul {
+	@apply !pl-10px lg:!pl-8;
 }

@@ -68,6 +68,7 @@
 											'container'  => '',
 											'items_wrap' => '%3$s',
 											'theme_location' => 'primary',
+                                            'link_before' => '<span class="menu-item-text">',
 										)
 									);
                                     

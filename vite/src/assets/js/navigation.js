@@ -33,12 +33,19 @@ close_menu.onclick = function () {
 		button_toggle.setAttribute('aria-expanded', 'true')
 	}
 }
-// open sub menu
+// open sub menu mobile
 const mobileMenuLink = document.querySelector('.mega-menu > a')
 const mobileMenuLinkSub = document.querySelector('#site-navigation>ul li ul')
 const menuList = document.querySelector('.mega-menu > ul')
 const menuListSub = document.querySelector('#site-navigation>ul li ul li ul')
+const submenuItemsMobile = document.querySelectorAll('.menu-item-has-children a')
 
-mobileMenuLink.addEventListener('click', function () {
-	menuList.classList.toggle('active-mobile-mega-menu')
+submenuItemsMobile.forEach(item => {
+	const arrowSpan = document.createElement('span')
+	arrowSpan.className = 'arrow-sub-mobile'
+	item.appendChild(arrowSpan)
+	arrowSpan.addEventListener('click', function (event) {
+		event.preventDefault()
+		menuList.classList.toggle('active-mobile-mega-menu')
+	})
 })

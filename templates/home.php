@@ -33,7 +33,7 @@ get_header(); ?>
     </section>
 
     <!-- S1 -->
-    <section class="pb-40 pt-120px bg-primary-300">
+    <section id="oferta" class="pb-40 pt-120px bg-primary-300 ">
         <div class="container mx-auto">
             <div class="lg:ml-28 lg:max-w-[709px]">
                 <span
@@ -46,10 +46,15 @@ get_header(); ?>
     </section>
 
     <!-- s2 -->
-    <?php sectionTwo($obraz="obraz-s2", $nad_naglowkiem="tekst_nad_naglowkiem-s2", $naglowek="naglowek-s2", $opis="opis-s2", $link="link-s2") ?>
+    <section id="ofirmie" class="s2 relative overflow-x-clip" data-aos="example-anim1">
+        <?php sectionTwo($obraz="obraz-s2", $nad_naglowkiem="tekst_nad_naglowkiem-s2", $naglowek="naglowek-s2", $opis="opis-s2", $link="link-s2") ?>
+    </section>
 
     <!-- s3 -->
-    <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
+    <section id="realizacje" class=" bg-primary-100 pt-120px">
+        <?php gallery($naglowek="naglowek-s3", $obrazki="obrazki") ?>
+    </section>
+
 
     <!-- cta -->
     <?php cta($naglowek="naglowek-cta", $topBtnText="tekst_nad_buttonem", $ctaLink="link-cta") ?>

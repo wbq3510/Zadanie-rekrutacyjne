@@ -89,7 +89,6 @@ footer a {
 			@apply -left-1/2;
 		}
 		100% {
-			left: 50%;
 			@apply left-1/2;
 		}
 	}
