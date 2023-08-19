@@ -15,7 +15,8 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
-				'2xl': '1480px',
+				'xl:': '1358px',
+				'2xl': '1576px',
 			},
 			fontSize: {
 				'28px': ['1.75rem', '2.0125rem'],
@@ -23,7 +24,6 @@ module.exports = {
 			},
 
 			colors: {
-				gray: {},
 				primary: {
 					100: '#DCC1AB',
 					200: '#1B5B31',
